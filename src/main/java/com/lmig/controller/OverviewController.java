@@ -90,7 +90,7 @@ public class OverviewController {
 
 		Main main = new Main();
 		try {
-			main.process(appDetails.getApplicationPath().toFile().toURI().toURL().getFile(), ".", appDetails.getApplicationPackage());
+			main.process(appDetails.getApplicationPath().toFile().toURI().toURL().getFile(), "./output", appDetails.getApplicationPackage());
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
