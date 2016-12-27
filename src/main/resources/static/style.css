@@ -1,0 +1,68 @@
+.body{
+	background: url(/images/cl2.png);
+	    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 400px;
+    padding-left: 5rem;
+    padding-top: 10rem;
+    font-size: 24px;
+    font-style: normal;
+    color: #011633;
+}
+.header{
+	padding: 1rem;
+	color: white;
+	background: #011633;
+	
+}
+
+.bttn {
+  border: 1px solid #4275bd;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.25rem #616265;
+  cursor: pointer;
+  
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.125s;
+
+  &:focus, &:hover {
+    border: 1px solid #002663;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+
+.bttn--primary {
+  background: #011633;
+  color: white;
+
+  &:focus, &:hover {
+    background: #002663;
+  }
+}
+.line_padding{
+	padding-top: 1rem;
+}
+.center_align
+{
+	text-align: center;
+}
+.caption{
+		padding-left: 1rem;
+	    font-size: small;
+	    color: lightgray;
+	}
+.footer{
+	padding: 1rem;
+	color: white;
+	background: #011633;
+	text-align: right;
+    padding-right: 3rem;
+}
