@@ -9,18 +9,23 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="webjars/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<script>
+	function enableLoader() {
+		document.getElementById('ldr').setAttribute("style", "display:block;");
+	}
+</script>
 </head>
 <body >
 	<div class="container">
 		<div class="row header">
 			<div class="col-xs-12">
 				<h1>
-					R Factor Finder<span class="caption">you are in the right place for help!</span>
+					ADICTUS<span class="caption">R Factor Finder!</span>
 				</h1>
 			</div>
 		</div>
-		<div class="row body">
-		<div class="col-xs-12">
+		<div class="row body home-top_padding">
+		<div id="1" class="col-xs-12">
 		<form method="POST" enctype="multipart/form-data" action="/">
 		<div class="row center_align">
 		<div class="col-xs-12">
@@ -48,30 +53,43 @@
 		</div>
 		</form>
 		</div>
-			<div class="row">
+			<div id="2" class="row ">
 				<div class="col-xs-12">
-					<div th:if="${warningmessage}">
-						<h6 class="alert alert-warning" th:text="${warningmessage}"></h6>
+					<div th:if="${not #strings.isEmpty(warningmessage)}">
+						<h6 class="center_align top__padding" th:text="${warningmessage}"></h6>
 					</div>
 						
-					<div th:if="${message}">
-						<h6 class="alert alert-success" th:text="${message}"></h6>
+					<div th:if="${not #strings.isEmpty(message)}">
+						<h6 class="center_align top__padding" th:text="${message}"></h6>
 						<form method="post" action="/overview">
-							<table class="table table-striped">
+						<div class="row center_align home-top_padding">
+							<div class="col-xs-12">
+								<span>
+								Package to be parsed:
+								</span>
+								<span>
+								<input placeholder="Optional" type="text" name="packagename"></input>
 								
-								<tr>
-									<td>Please enter the package you looking to parse:</td>									
-									<td><input type="text" name="packagename"></input></td>
-								</tr>
-								<tr>
-									<td></td>
-									<td><button class="btn btn-primary btn-md" type="submit">Let's
-											Get Started</button></td>
-								</tr>
-							</table>
+								</span>
+							</div>
+						</div>
+						<div class="row center_align top_padding">
+							<div class="col-xs-12 ">
+								<button class="bttn bttn--primary" type="submit" onclick="enableLoader()">
+										Get Started</button>
+							</div>
+							
+						</div>
+							
 						</form>
 					</div>
 					
+				</div>
+			</div>
+			
+			<div id="ldr" style="display:none;" class="row loader--alignment top_padding">
+				<div class="col-xs-12">
+					<div class="loader"></div>
 				</div>
 			</div>
 		</div>

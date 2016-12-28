@@ -6,8 +6,17 @@
 <!-- Bootstrap -->
 <link href="webjars/bootstrap/3.3.4/css/bootstrap.min.css"
 	rel="stylesheet" media="screen"></link>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="webjars/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+	function goToHome() {
+		var conf = confirm("Once you navigate to home you cannot come back to this place! Want to Proceed any way?")
+		if (conf == true) {
+			location.href = "getstarted.html";
+		}	
+	}
+</script>
 </head>
 <body>
 	<div class="container-fluid">

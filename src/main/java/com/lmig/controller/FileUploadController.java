@@ -70,6 +70,7 @@ public class FileUploadController {
 			redirectAttributes.addFlashAttribute("warningmessage",
 					"You should upload application file to proceed!");
 		}
+		
 		return "redirect:/";
 	}
 

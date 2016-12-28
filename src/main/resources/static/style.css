@@ -1,13 +1,58 @@
 .body{
 	background: url(/images/cl2.png);
-	    background-repeat: no-repeat;
+	background-repeat: no-repeat;
     background-size: 100% 100%;
     min-height: 400px;
-    padding-left: 5rem;
-    padding-top: 10rem;
-    font-size: 24px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: medium;
     font-style: normal;
     color: #011633;
+}
+
+.disablable {
+	    position:relative;
+	    overflow:hidden;
+    }
+
+    .disablable-disabled .glasspanel {
+	    display:block;
+	    position:absolute;
+	    top:0px;
+	    bottom:0px;
+	    opacity:0.4;
+	    filter:alpha(opacity=40);
+	    background-color: green;
+	    height:expression(parentElement.scrollHeight + 'px');
+	    width:100%;
+    }
+.tech
+{
+	font-weight: bold;
+	vertical-align: middle;
+}
+    .disablable-enabled .glasspanel {
+    	display: none;
+    }
+
+.tbl{
+	width: 100%;
+    word-wrap: break-word;
+    table-layout: fixed;
+}
+.tbl--td{
+	word-wrap: break-word;
+}
+.home-top_padding{
+	padding-top: 4rem;
+}
+.nav--style{
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	background-color: #363738;
+    border-color: #cee1f0;
 }
 .header{
 	padding: 1rem;
@@ -16,12 +61,16 @@
 	
 }
 
+.home_button{
+	cursor: pointer;
+    padding-right: 1rem;
+}
 .bttn {
   border: 1px solid #4275bd;
   border-radius: 0.25rem;
   box-shadow: 0 0 0.25rem #616265;
   cursor: pointer;
-  
+  font-size: larger;
   font-weight: bold;
   line-height: 1.5;
   margin: 0.25rem;
@@ -36,6 +85,28 @@
   &:active {
     box-shadow: none;
   }
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    padding-top: 1rem;
+}
+
+.top_padding{
+	padding-top: 1rem;
+}
+
+.loader--alignment{
+	    text-align: -webkit-center;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 
@@ -66,3 +137,10 @@
 	text-align: right;
     padding-right: 3rem;
 }
+
+.top__padding{
+	padding-top: 1rem;
+}
+
+
+

@@ -6,43 +6,63 @@
 <!-- Bootstrap -->
 <link href="webjars/bootstrap/3.3.4/css/bootstrap.min.css"
 	rel="stylesheet" media="screen"></link>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="webjars/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script>
+	function goToHome() {
+		var conf = confirm("Once you navigate to home you cannot come back to this place! Want to Proceed any way?")
+		if (conf == true) {
+			location.href = "getstarted.html";
+		}	
+	}
+</script>
 </head>
-<body>
-	<div class="container-fluid">
-		<div class="well well-sm">
-			<h1>
-				Class Dependency <small> Application: <span th:text="${appname}"></span></small>
-			</h1>
+<body >
+	<div class="container">
+		<div class="row header">
+			<div class="col-xs-12">
+				<h1>
+					ADICTUS<span class="caption">R Factor Finder!</span>
+				</h1>
+			</div>
 		</div>
-		<div>
-			<ul class="nav nav-pills">
-				<li><a href="/overview">Overview</a></li>
-				<li><a href="/getRFactor">R Factor Details</a></li>
-				<li><a href="/depJars">Jar Dependency</a></li>
-				<li class="active"><a href="/depClasses">Class Dependency</a></li>
-			</ul>
-			<hr />
-		</div>
-		<br />
-		<div>
+		<nav class="navbar navbar-inverse nav--style">
+		  <div class="container-fluid">
+		       <ul class="nav navbar-nav">
+			      	<li><a href="/overview">Overview</a></li>
+					<li><a href="/getRFactor">R Factor Details</a></li>
+					<li><a href="/depJars">Jar Dependency</a></li>
+					<li class="active"><a href="/depClasses">Class Dependency</a></li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right home_button">
+                <li><a onclick="goToHome()">Home</a></li>
+            </ul>
+		  </div>
+		</nav>
+		<div class="row body">
+			<div>
 			<div class="col-md-12">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Dependent Classes</div>
-					<table class="table table-striped table-bordered table-responsive">
+					<table class="table table-hover table-inverse tbl">
 						<tr>
 							<th>Class</th>
 							<th>Depends On</th>
 						</tr>
 						<tr th:each="depClass : ${depClasses}">
-							<td th:text="${depClass.class_name}"></td>
-							<td th:utext="${depClass.dependent_classes}"  style="word-wrap: break-word;max-width: 700px;"></td>
+							<td class="tbl--td" th:text="${depClass.class_name}"></td>
+							<td class="tbl--td" th:utext="${depClass.dependent_classes}" ></td>
 						</tr>
 					</table>
 				</div>
 			</div>
 		</div>
+		</div>
+		<div class="row footer">
+			<h5> &copy; Cognizant Hackathon 2016</h5>
+		</div>
 	</div>
 </body>
+
 </html>
