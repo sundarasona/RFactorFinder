@@ -98,7 +98,7 @@
         </Style>
       </Styles>
       <Worksheet ss:Name="Sheet1">
-        <Table ss:ExpandedColumnCount="3" ss:ExpandedRowCount="25" x:FullColumns="1"
+        <Table ss:ExpandedColumnCount="3"  x:FullColumns="1"
          x:FullRows="1" ss:DefaultRowHeight="15">
           <Column ss:AutoFitWidth="0" ss:Width="149.25"/>
           <Column ss:AutoFitWidth="0" ss:Width="268.5"/>
@@ -200,7 +200,7 @@
             </Row>
           </xsl:for-each>
 
-          <Row ss:Index="21" ss:Height="30">
+          <Row  ss:Height="30">
             <Cell ss:StyleID="s94">
               <Data ss:Type="String">Class</Data>
             </Cell>
