@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Bootstrap -->
+<link href="webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+	rel="stylesheet" media="screen"></link>
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="webjars/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div th:fragment="header">
+		<div class="row header">
+			<div class="col-xs-12">
+				<h1>ADICTUS<span class="caption">R Factor Finder -</span><span style="color: cyan" class="caption" th:text="${appname}"></span></h1>
+			</div>
+			<div class="nav navbar-nav navbar-right">
+				<span class="home_button"><a href="getstarted.html">Home</a></span>&nbsp;&nbsp;&nbsp;
+				<span ><a href="comingsoon.html">Coming soon</a></span>&nbsp;&nbsp;&nbsp;
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -17,13 +17,7 @@
 </head>
 <body >
 	<div class="container">
-		<div class="row header">
-			<div class="col-xs-12">
-				<h1>
-					ADICTUS<span class="caption">R Factor Finder!</span>
-				</h1>
-			</div>
-		</div>
+	<div th:replace="headerTemplate :: header">&nbsp;</div>
 		<div class="row body home-top_padding">
 		<div id="1" class="col-xs-12">
 		<form method="POST" enctype="multipart/form-data" action="/">
@@ -61,16 +55,16 @@
 						
 					<div th:if="${not #strings.isEmpty(message)}">
 						<h6 class="center_align top__padding" th:text="${message}"></h6>
-						<form method="post" action="/overview">
+						<form method="post" action="/process">
 						<div class="row center_align home-top_padding">
 							<div class="col-xs-12">
 								<span>
-								Package to be parsed:
+								Base package to be parsed:
 								</span>
 								<span>
 								<input placeholder="Optional" type="text" name="packagename"></input>
-								
 								</span>
+								<span>(Eg."com.lmig", "com.safeco")</span>
 							</div>
 						</div>
 						<div class="row center_align top_padding">
@@ -93,9 +87,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="row footer">
-			<h5> &copy; Cognizant Hackathon 2016</h5>
-		</div>
+		<div th:replace="footerTemplate :: footer">&nbsp;</div>
 	</div>
+	
 </body>
 </html>

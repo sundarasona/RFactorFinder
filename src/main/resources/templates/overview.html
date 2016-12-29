@@ -9,24 +9,10 @@
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="webjars/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script>
-	function goToHome() {
-		var conf = confirm("Once you navigate to home you cannot come back to this place! Want to Proceed any way?")
-		if (conf == true) {
-			location.href = "getstarted.html";
-		}	
-	}
-</script>
 </head>
 <body >
 	<div class="container">
-		<div class="row header">
-			<div class="col-xs-12">
-				<h1>
-					ADICTUS<span class="caption">R Factor Finder!</span>
-				</h1>
-			</div>
-		</div>
+	<div th:replace="headerTemplate :: header">&nbsp;</div>
 		<nav class="navbar navbar-inverse nav--style">
 		  <div class="container-fluid">
 		       <ul class="nav navbar-nav">
@@ -38,15 +24,12 @@
 				        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Report
 				        <span class="caret"></span></a>
 				        <ul class="dropdown-menu">
-				          <li><a href="#">Pdf</a></li>
-				          <li><a href="#">Word</a></li>
-				          <li><a href="#">Excel</a></li>
+				          <!-- <li><a href="#">Pdf</a></li> -->
+				          <li><a href="/wordReport">Word</a></li>
+				          <li><a href="/excelReport">Excel</a></li>
 				        </ul>
 				      </li>
 			    </ul>
-			    <ul class="nav navbar-nav navbar-right home_button">
-                <li><a onclick="goToHome()">Home</a></li>
-            </ul>
 		  </div>
 		</nav>
 		<div class="row body">
@@ -78,9 +61,7 @@
 		</div>
 			
 		</div>
-		<div class="row footer">
-			<h5> &copy; Cognizant Hackathon 2016</h5>
-		</div>
+		<div th:replace="footerTemplate :: footer">&nbsp;</div>
 	</div>
 </body>
 </html>
